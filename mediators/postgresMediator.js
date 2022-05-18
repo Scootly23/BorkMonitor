@@ -1,4 +1,4 @@
-const {Pool,Client} = require('pg')
+const {Pool} = require('pg')
 var uuid = require('uuid');
 const connectionString = 'postgres://kdgfmognzmhxdm:8a1091e987bf85bfaeaabe8c8f930fbe721d699077ad6de374d86e86423bcdc5@ec2-54-157-79-121.compute-1.amazonaws.com:5432/d21b1d7h1gfkn6'
 
