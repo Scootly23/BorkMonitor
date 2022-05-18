@@ -7,10 +7,7 @@ app.get('/',(req,res) =>{
     res.send("Hello World")
 })
 
-app.post('/Messages',(req,res)=>{
-    console.log(req.body)
-    res.send(req.body.message)
-    
-})
+require('./routes/messages')(app)
+
 
 app.listen(process.env.PORT)
