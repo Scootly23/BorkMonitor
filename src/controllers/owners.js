@@ -5,8 +5,9 @@ const router = express.Router()
 
 router
     .route('/')
-    .get((req,res) =>{
-        res.sendFile(path.join(__dirname, '../views/PostMessage.html'));
+    .get(async (req,res) =>{
+        return await postgres.getOwners();
+        // res.sendFile(path.join(__dirname, '../../public/owner/Admin.html'));
     })
     .post(async (req,res)=>{
         let id = await postgres.saveMessage(req.body.message)
@@ -16,5 +17,5 @@ router
 
 module.exports = function(app)
 {
-    app.use('/messages',router)
+    app.use('/owners',router)
 }

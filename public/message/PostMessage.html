@@ -14,17 +14,17 @@
 <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" href="#">
             <img src="https://flyclipart.com/thumb2/beagle-vector-dog-for-free-download-on-ya-webdesign-540878.png" width="40" height="40" alt="">
-            Penny's Anonymous Message Board
+            Penny's Message Board
         </a>
         </nav>
     <form id="message_form">
         <div class="container-fluid">
                 <div class="card">
                         <div class="card-header">
-                            <h4>Hello!</h4>
+                            <h4>We are currently Away</h4>
                         </div>
                         <div class="card-body">
-                          <p class="card-text"> We appreciate you taking the time to send us a message, please fill out the following form and we will recieve your anonymous message a few moments after you click submit.<br/>
+                          <p class="card-text"> Thank you for taking the time to send us a message. If you would like to customize the message you can do so below otherwise we will recieve the pre-populated message shortly after you click 'Submit'<br/>
                             <br/>
                             Thank you!<br/> 
                             Anna, Scott, & Penny </p>
@@ -33,9 +33,9 @@
           <br/>
           <br/>
           <br/>
-          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="(Optional) Return Email or Phone">
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="(Optional) Contact information">
                 <br/>
-          <textarea class="form-control" id="messageInput" rows="3" placeholder="Message" value=""></textarea>
+          <textarea class="form-control" id="messageInput" rows="3" placeholder="Penny has been barking and sounds distressed!"></textarea>
           <br/>
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
@@ -47,25 +47,7 @@
       </form>
 
     <!-- Optional JavaScript -->
-    <script>
-        const form  = document.getElementById('message_form');
-        console.log("yes")
-        form.addEventListener('submit', (event) => {
-            let message = document.getElementById('messageInput').value
-            
-            let xhr = new XMLHttpRequest();
-
-            let json = JSON.stringify({
-            message: message,
-            });
-
-            xhr.open("POST", 'https://tranquil-plateau-31149.herokuapp.com/Messages')
-            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-            xhr.setRequestHeader('Access-Control-Allow-Origin','*')
-
-            xhr.send(json);
-        });
-    </script>
+    <script src="./message/postMessage.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
