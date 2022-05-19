@@ -6,6 +6,7 @@ let transporter = nodemailer.createTransport({
         pass: process.env.EmailPass
     }
 });
+console.log(process.env)
 
 const sendMessage = (number, message) =>{
     let mailOptions ={
