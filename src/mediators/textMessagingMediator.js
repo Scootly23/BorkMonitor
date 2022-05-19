@@ -1,14 +1,19 @@
 const nodemailer = require('nodemailer');
+const username = process.env.EmailUsername;
+const password = process.env.EmailPass;
+
 let transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
-        user: process.env.EmailUsername,
-        pass: process.env.EmailPass
+        user: username,
+        pass: password
     }
 });
-console.log(process.env)
+console.log(username,password)
 
 const sendMessage = (number, message) =>{
+    console.log(username,password)
+
     let mailOptions ={
         from: "johan.phillips12@gmail.com",
         to: number+"@vtext.com",
