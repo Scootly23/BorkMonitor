@@ -12,7 +12,7 @@ form.addEventListener('submit', async (event) => {
     message: message,
     });
 
-    xhr.open("POST", 'http://localhost:5000/Messages')
+    xhr.open("POST", 'https://tranquil-plateau-31149.herokuapp.com/Messages')
     xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
     xhr.setRequestHeader('Access-Control-Allow-Origin','*')
 
