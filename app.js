@@ -11,6 +11,7 @@ app.use(express.static('public'));
 app.get('/',(req,res) =>{
     res.send("Hello World")
 })
+console.log(process.env)
 require('./src/controllers/messages')(app)
 require('./src/controllers/owners')(app)
 
