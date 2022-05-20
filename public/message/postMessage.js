@@ -17,5 +17,4 @@ form.addEventListener('submit', async (event) => {
     xhr.setRequestHeader('Access-Control-Allow-Origin','*')
 
     await xhr.send(json);
-    event.preventDefault()
 });
